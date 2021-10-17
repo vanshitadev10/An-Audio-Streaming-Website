@@ -1,0 +1,494 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Heading */
+
+.heading::before{
+    content: "";
+    background: url(Images/main.jpg) no-repeat center 70%/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    height: 43%;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 10%;
+    height: 47vh;
+}
+
+.heading .hea1{
+    font-family: 'Courgette', cursive;
+    color: white;
+    font-size: 5rem;
+    margin-top: -50px;
+}
+
+.heading .hea2{
+    font-family: 'Playfair Display', serif;
+    color: white;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+
+/* Top Buttons */
+
+.navigation ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navigation ul li{
+    list-style: none;
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.navigation ul li:hover{
+    cursor: pointer;
+}
+
+.active{
+    box-shadow: 4px 4px 5px rgb(180, 179, 179);
+}
+
+
+/* List Of Songs */
+
+.list{
+    width: 94%;
+    margin: auto;
+}
+
+.list ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.list ul .song{
+    display: grid;
+    grid-template-columns: 1.2fr 3fr;
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 1%;
+    margin-bottom: 1%;
+    border: 2px solid rgb(121, 121, 121);
+    background-color: rgb(231, 231, 231);
+    border-radius: 25px;
+}
+
+.list .song .player{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 2fr 0.8fr 0.6fr;
+    align-items: center;
+}
+
+.list .song .player .btn, .list .song .player .fav{
+    width: 10%;
+    border: none;
+    background-color: rgb(231, 231, 231);
+}
+
+.list .song .player .btn:hover, .list .song .player .fav:hover{
+    cursor: pointer;
+}
+
+.list .song .player .btn .img1{
+    width: 120%;
+}
+
+.list .song .player .point{
+    width: 3%;
+    height: 50%;
+    background-color: rgb(145, 145, 145);
+    border-radius: 50%;
+    display: grid;
+}
+
+.list .song .player .point .line{
+    width: 2300%;
+    height: 20%;
+    background-color: rgb(134, 134, 134);
+    margin-top: 40%;
+    border-radius: 25px;
+}
+
+.list .song .player{
+    color: rgb(61, 61, 61);
+    font-size: 1.4rem;
+}
+
+.list .song .player .time .img2{
+    width: 10%;
+}
+
+.list .song .player .fav .img3{
+    width: 200%;
+}
+
+#aud15{
+    margin-bottom: 40px;
+}
+
+
+/* Footer */
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+
+/* Making The Website Responsive */
+
+@media only screen and (min-width: 1100px) and (max-width: 1300px){
+
+    .heading .hea1{
+        font-size: 4rem;
+    }
+
+    .heading .hea2{
+        font-size: 1.3rem;
+    }
+
+    .navigation ul li{
+        font-size: 1.6rem;
+    }
+    
+    .list ul .song{
+        font-size: 1.3rem;
+    }
+
+    .list .song .player{
+        grid-template-columns: 1fr 0.5fr 2fr 0.8fr 0.6fr;
+    }
+
+    .list .song .player .time{
+        font-size: 1.3rem;
+    }
+
+    .run{
+        font-size: 1.3rem;
+    }
+}
+
+
+@media only screen and (min-width: 770px) and (max-width: 1100px){
+
+    .heading .hea1{
+        font-size: 4rem;
+    }
+
+    .heading .hea2{
+        font-size: 1.3rem;
+    }
+
+    .navigation ul li{
+        font-size: 1.6rem;
+        margin-bottom: 2%;
+    }
+    
+    .list ul .song{
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    .list ul .song .text{
+        margin-bottom: 10px;
+    }
+
+    .list .song .player{
+        grid-template-columns: 1fr 0.5fr 2fr 0.8fr 0.6fr;
+        width: 90%;
+    }
+
+    .list .song .player .time{
+        font-size: 1.3rem;
+    }
+
+    .list .song .player .point{
+        width: 4%;
+    }
+
+    .list .song .player .point .line{
+        width: 2000%;
+        margin-top: 50%;
+    }
+
+    .list .song .player .btn .img1{
+        width: 150%;
+    }
+
+    .list .song .player .time .img2{
+        width: 13%;
+    }
+
+    .list .song .player .fav .img3{
+        width: 230%;
+    }
+
+    .run{
+        font-size: 1.3rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 770px){
+
+    .heading::before{
+        background: url(Images/main.jpg) no-repeat 30% 70%/cover;
+    }
+
+    .heading{
+        margin-right: 5%;
+    }
+
+    .heading .hea1{
+        font-size: 3rem;
+    }
+
+    .heading .hea2{
+        font-size: 0.9rem;
+    }
+
+    .navigation ul li{
+        font-size: 1.3rem;
+        margin-bottom: 2%;
+    }
+    
+    .list ul .song{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        margin-bottom: 2%;
+    }
+
+    .list ul .song .text{
+        margin-bottom: 10px;
+    }
+
+    .list .song .player{
+        grid-template-columns: 1fr 0.5fr 2fr 0.8fr 0.6fr;
+        width: 90%;
+    }
+
+    .list .song .player .time{
+        font-size: 1rem;
+    }
+
+    .list .song .player .point{
+        width: 4%;
+    }
+
+    .list .song .player .point .line{
+        width: 2000%;
+    }
+
+    .list .song .player .btn .img1{
+        width: 150%;
+    }
+
+    .list .song .player .time .img2{
+        width: 17%;
+    }
+
+    .list .song .player .fav .img3{
+        width: 230%;
+    }
+
+    .run{
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 600px){
+
+    .heading::before{
+        background: url(Images/main.jpg) no-repeat 30% 70%/cover;
+    }
+
+    .heading{
+        margin-right: 5%;
+    }
+
+    .heading .hea1{
+        font-size: 2.5rem;
+    }
+
+    .heading .hea2{
+        font-size: 0.8rem;
+    }
+
+    .navigation ul li{
+        font-size: 1.3rem;
+        margin-bottom: 4%;
+    }
+    
+    .list ul .song{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        margin-bottom: 2%;
+    }
+
+    .list ul .song .text{
+        margin-bottom: 10px;
+    }
+
+    .list .song .player{
+        grid-template-columns: 0.7fr 0.9fr 2.1fr 01fr 0.3fr;
+        width: 90%;
+    }
+
+    .list .song .player .time{
+        font-size: 1.1rem;
+    }
+
+    .list .song .player .point{
+        width: 5%;
+    }
+
+    .list .song .player .point .line{
+        width: 1500%;
+        margin-top: 50%;
+    }
+
+    .list .song .player .btn .img1{
+        width: 300%;
+    }
+
+    .list .song .player .time .img2{
+        width: 25%;
+    }
+
+    .list .song .player .fav .img3{
+        width: 650%;
+    }
+
+    .run{
+        font-size: 1.1rem;
+    }
+
+    footer{
+        font-size: 0.8rem;
+    }
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 400px){
+
+    .heading::before{
+        background: url(Images/main.jpg) no-repeat 22% 70%/cover;
+    }
+
+    .heading{
+        margin-right: 5%;
+        height: 45vh;
+    }
+
+    .heading .hea1{
+        font-size: 2rem;
+    }
+
+    .heading .hea2{
+        font-size: 0.8rem;
+    }
+
+    .navigation ul li{
+        font-size: 1.3rem;
+        margin-bottom: 8%;
+    }
+    
+    .list ul .song{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        margin-bottom: 5%;
+    }
+
+    .list ul .song .text{
+        margin-bottom: 10px;
+        overflow-x: scroll;
+    }
+
+    .list .song .player{
+        grid-template-columns: 0.6fr 0.9fr 2.1fr 01fr 0.3fr;
+        width: 90%;
+    }
+
+    .list .song .player .time{
+        font-size: 1rem;
+    }
+
+    .list .song .player .point{
+        width: 6%;
+    }
+
+    .list .song .player .point .line{
+        width: 1400%;
+        margin-top: 50%;
+    }
+
+    .list .song .player .btn .img1{
+        width: 500%;
+    }
+
+    .list .song .player .time .img2{
+        width: 25%;
+    }
+
+    .list .song .player .fav .img3{
+        width: 850%;
+    }
+
+    .run{
+        font-size: 1rem;
+    }
+
+    footer{
+        font-size: 0.7rem;
+    }
+
+    #aud15{
+        margin-bottom: 30px;
+    }
+}

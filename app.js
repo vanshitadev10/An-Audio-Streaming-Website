@@ -38,11 +38,29 @@ const run = document.getElementsByClassName('run');
 const fav = document.getElementsByClassName('fav');
 
 
+var mediaQuery = window.matchMedia("(max-width: 1100px)");
+function fun() {
+    if (mediaQuery.matches) {
+        for (var i = 0; i < 15; i++) {
+            song[i].style.display = 'flex';
+        }
+    }
+    else {
+        for (var i = 0; i < 15; i++) {
+            song[i].style.display = 'grid';
+        }
+    }
+}
+
+setInterval(() => {
+    if (all_song.classList == 'active') {
+        fun();
+    }
+}, 1)
+
 
 all_song.addEventListener('click', () => {
-    for (var i = 0; i < 15; i++) {
-        song[i].style.display = 'grid';
-    }
+    fun();
     all_song.classList.add('active');
     favourite.classList.remove('active');
 })
@@ -162,7 +180,12 @@ function favor(num1, num2) {
         num1.firstElementChild.src = 'Images/heart_fav.png';
 
         favourite.addEventListener('click', () => {
-            num2.style.display = 'grid';
+            if (mediaQuery.matches) {
+                num2.style.display = 'flex';
+            }
+            else {
+                num2.style.display = 'grid';
+            }
             favourite.classList.add('active');
             all_song.classList.remove('active');
         })
